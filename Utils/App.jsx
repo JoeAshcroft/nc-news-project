@@ -1,10 +1,10 @@
 import "./App.css";
-import Nav from "./Components/Nav";
+import Nav from "../src/Components/Nav";
 import { Routes, Route } from "react-router-dom";
-import Homepage from "./Pages/Homepage";
-import Articles from "./Pages/Articles";
-import Comments from "./Pages/Comments";
-import Topics from "./Pages/Topics";
+import Homepage from "../src/Pages/Homepage";
+import Articles from "../src/Pages/Articles";
+import Comments from "../src/Pages/Comments";
+import Topics from "../src/Pages/Topics";
 
 function App() {
   return (
