@@ -9,3 +9,9 @@ export const getArticles = () => {
     return data.articles;
   });
 };
+
+export const getArticleById = (articleId) => {
+  return baseApiUrl.get(`/articles/${articleId}`).then(({ data }) => {
+    return data.article;
+  });
+};

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Header from "../Header";
 import { getArticles } from "../../../Utils/api";
 import ArticleCard from "../ArticleCard";
+import { Link } from "react-router-dom";
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
@@ -34,16 +35,18 @@ const Articles = () => {
             created_at,
           }) => {
             return (
-              <ArticleCard
-                key={article_id}
-                title={title}
-                article_img_url={article_img_url}
-                author={author}
-                topic={topic}
-                body={body}
-                votes={votes}
-                created_at={created_at}
-              />
+              <Link to={`/articles/${article_id}`}>
+                <ArticleCard
+                  key={article_id}
+                  title={title}
+                  article_img_url={article_img_url}
+                  author={author}
+                  topic={topic}
+                  body={body}
+                  votes={votes}
+                  created_at={created_at}
+                />
+              </Link>
             );
           }
         )}

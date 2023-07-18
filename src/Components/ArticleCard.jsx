@@ -5,13 +5,18 @@ const ArticleCard = ({
   topic,
   votes,
   created_at,
+  article_id,
 }) => {
+  const dateFormatter = (created_at) => {
+    return new Date(created_at).toLocaleDateString();
+  };
 
   return (
     <article className="articleCard">
       <h2>{title}</h2>
       <p>
-        Written by {author} <br /> {Date(created_at)} <br />
+        Written by {author} <br /> {dateFormatter(created_at)}
+        <br />
         Topic: {topic}
       </p>
       <img src={article_img_url} alt="cover image for article" />
