@@ -1,6 +1,6 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto;
+  /* margin: auto; */
   padding: 2rem;
   text-align: center;
 }
@@ -14,10 +14,20 @@ article {
   margin: 10px;
 }
 
-ul {
+.navbar {
   list-style: none;
+  display: inline-flex;
+  padding: 0;
 }
-nav {
-  text-align: left;
-  display: inline;
+.nav-li {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.articleImg {
+  height: 300px;
+  width: auto;
+}
+.article-ul {
+  list-style: none;
 }

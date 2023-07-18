@@ -22,7 +22,7 @@ const Articles = () => {
   return (
     <section className="articles">
       <Header title="Articles" />
-      <ol>
+      <ul className="article-ul">
         {articles.map(
           ({
             article_id,
@@ -51,7 +51,7 @@ const Articles = () => {
             );
           }
         )}
-      </ol>
+      </ul>
     </section>
   );
 };

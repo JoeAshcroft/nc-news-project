@@ -19,7 +19,7 @@ const ArticleCard = ({
         <br />
         Topic: {topic}
       </p>
-      <img src={article_img_url} alt="cover image for article" />
+      <img className ="articleImg" src={article_img_url} alt="cover image for article" />
       <div>{votes} upvotes</div>
     </article>
   );

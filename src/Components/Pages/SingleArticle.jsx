@@ -31,6 +31,7 @@ const SingleArticle = () => {
       <h2>Written by {article.author}</h2>
       <p>on {dateFormatter(article.created_at)}</p>
       <img
+        className="articleImg"
         src={article.article_img_url}
         alt={`cover image for article titled ${article.title}`}
       />
