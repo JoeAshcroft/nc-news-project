@@ -7,7 +7,7 @@ const ArticleCard = ({
   created_at,
 }) => {
   return (
-    <article>
+    <article className="articleCard">
       <h2>{title}</h2>
       <p>
         Written by {author} on {created_at} <br />

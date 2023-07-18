@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import Header from "../Components/Header";
-import { getArticles } from "../../Utils/api";
-import ArticleCard from "../Components/ArticleCard";
+import Header from "../Header";
+import { getArticles } from "../../../Utils/api";
+import ArticleCard from "../ArticleCard";
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
@@ -13,7 +13,7 @@ const Articles = () => {
   }, []);
 
   return (
-    <section>
+    <section className="articles">
       <Header title="Articles" />
       <ol>
         {articles.map(
