@@ -35,18 +35,19 @@ const Articles = () => {
             created_at,
           }) => {
             return (
-              <Link to={`/articles/${article_id}`}>
-                <ArticleCard
-                  key={article_id}
-                  title={title}
-                  article_img_url={article_img_url}
-                  author={author}
-                  topic={topic}
-                  body={body}
-                  votes={votes}
-                  created_at={created_at}
-                />
-              </Link>
+              <li key={article_id}>
+                <Link to={`/articles/${article_id}`}>
+                  <ArticleCard
+                    title={title}
+                    article_img_url={article_img_url}
+                    author={author}
+                    topic={topic}
+                    body={body}
+                    votes={votes}
+                    created_at={created_at}
+                  />
+                </Link>
+              </li>
             );
           }
         )}
