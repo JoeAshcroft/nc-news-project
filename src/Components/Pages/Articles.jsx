@@ -5,12 +5,18 @@ import ArticleCard from "../ArticleCard";
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     getArticles().then((articlesFromApi) => {
       setArticles(articlesFromApi);
+      setIsLoading(false);
     });
   }, []);
+
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <section className="articles">
