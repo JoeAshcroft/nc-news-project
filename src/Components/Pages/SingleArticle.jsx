@@ -1,8 +1,7 @@
 import { getArticleById } from "../../../Utils/api";
-import ArticleCard from "../ArticleCard";
 import Header from "../Header";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 const SingleArticle = () => {
   const [article, setArticle] = useState([]);
@@ -35,7 +34,10 @@ const SingleArticle = () => {
         src={article.article_img_url}
         alt={`cover image for article titled ${article.title}`}
       />
-      <p>{article.body}</p>
+      <h3>{article.body}</h3>
+      <Link to={`/articles/${articleId}/comments`}>
+        <p>View Comments Here</p>
+      </Link>
       <div>{article.votes} upvotes</div>
     </article>
   );

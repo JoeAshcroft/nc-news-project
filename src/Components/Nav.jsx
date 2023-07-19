@@ -13,9 +13,9 @@ const Nav = () => {
         <Link to="/topics">
           <li className="nav-li">Topics</li>
         </Link>
-        <Link to="/comments">
+        {/* <Link to="/comments">
           <li className="nav-li">Comments</li>
-        </Link>
+        </Link> */}
       </ul>
     </nav>
   );

@@ -8,7 +8,7 @@ const Homepage = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    getArticleById(1).then((articleFromApi) => {
+    getArticleById(Math.ceil(Math.random() * 36)).then((articleFromApi) => {
       setArticle(articleFromApi);
       setIsLoading(false);
     });

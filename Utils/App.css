@@ -31,3 +31,21 @@ article {
 .article-ul {
   list-style: none;
 }
+
+h1 {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+.commentCard {
+  border: solid;
+  margin: 10px;
+}
+.comment-ul {
+  list-style: none;
+  
+}
+
+ul.comment-ul {
+  padding: none;
+}

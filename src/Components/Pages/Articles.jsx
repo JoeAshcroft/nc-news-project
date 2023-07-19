@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 const Articles = () => {
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     getArticles().then((articlesFromApi) => {
       setArticles(articlesFromApi);

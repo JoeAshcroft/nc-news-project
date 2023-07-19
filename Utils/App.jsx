@@ -15,8 +15,9 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/articles" element={<Articles />} />
         <Route path="/topics" element={<Topics />} />
-        <Route path="/comments" element={<Comments />} />
+
         <Route path="/articles/:articleId" element={<SingleArticle />} />
+        <Route path="/articles/:articleId/comments" element={<Comments />} />
       </Routes>
     </main>
   );

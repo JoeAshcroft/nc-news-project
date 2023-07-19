@@ -5,7 +5,6 @@ const ArticleCard = ({
   topic,
   votes,
   created_at,
-  article_id,
 }) => {
   const dateFormatter = (created_at) => {
     return new Date(created_at).toLocaleDateString();
@@ -19,7 +18,11 @@ const ArticleCard = ({
         <br />
         Topic: {topic}
       </p>
-      <img className ="articleImg" src={article_img_url} alt="cover image for article" />
+      <img
+        className="articleImg"
+        src={article_img_url}
+        alt="cover image for article"
+      />
       <div>{votes} upvotes</div>
     </article>
   );
