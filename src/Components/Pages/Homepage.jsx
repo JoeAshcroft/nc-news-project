@@ -8,7 +8,7 @@ const Homepage = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    getArticleById(Math.ceil(Math.random() * 36)).then((articleFromApi) => {
+    getArticleById(Math.ceil(Math.random() * 37)).then((articleFromApi) => {
       setArticle(articleFromApi);
       setIsLoading(false);
     });
@@ -26,7 +26,8 @@ const Homepage = () => {
       <p>We're packed with great articles like this:</p>
       <Link to={`/articles/${article.article_id}`}>
         <article>
-          <h2>Written by {article.author}</h2>
+          <h2>{article.title}</h2>
+          <h3>Written by {article.author}</h3>
           <img
             src={article.article_img_url}
             alt={`cover image for article titled ${article.title}`}
