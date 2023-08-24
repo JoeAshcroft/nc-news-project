@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <nav>
+    <nav className="nav">
       <ul className="navbar">
         <Link to="/">
           <li className="nav-li">Home</li>
@@ -13,9 +13,6 @@ const Nav = () => {
         <Link to="/topics">
           <li className="nav-li">Topics</li>
         </Link>
-        {/* <Link to="/comments">
-          <li className="nav-li">Comments</li>
-        </Link> */}
       </ul>
     </nav>
   );

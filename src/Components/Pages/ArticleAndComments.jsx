@@ -1,6 +1,6 @@
 import Comments from "../Comments";
 import Header from "../Header";
-import SingleArticle from "./SingleArticle";
+import SingleArticle from "../SingleArticle";
 
 const ArticleAndComments = () => {
   return (
