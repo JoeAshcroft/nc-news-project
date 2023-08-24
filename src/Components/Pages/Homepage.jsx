@@ -2,6 +2,8 @@ import Header from "../Header";
 import { useState, useEffect } from "react";
 import { getArticleById } from "../../../Utils/api";
 import { Link } from "react-router-dom";
+import SingleArticle from "./SingleArticle";
+import ArticleCard from "../ArticleCard";
 
 const Homepage = () => {
   const [article, setArticle] = useState([]);
@@ -26,14 +28,14 @@ const Homepage = () => {
       <p>We're packed with great articles like this:</p>
       <Link to={`/articles/${article.article_id}`}>
         <article>
-          <h2>{article.title}</h2>
-          <h3>Written by {article.author}</h3>
-          <img
-            src={article.article_img_url}
-            alt={`cover image for article titled ${article.title}`}
+          <ArticleCard
+            title={article.title}
+            article_img_url={article.article_img_url}
+            author={article.author}
+            topic={article.topic}
+            votes={article.votes}
+            created_at={article.created_at}
           />
-          <p>{article.body}</p>
-          <div>{article.votes} upvotes</div>
         </article>
       </Link>
     </section>
