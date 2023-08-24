@@ -21,3 +21,15 @@ export const getCommentsByArticleId = (articleId) => {
     return data.comments;
   });
 };
+
+export const patchArticleVote = (articleId) => {
+  const patchVoteReqBody = {
+    inc_votes: 1,
+  };
+  return baseApiUrl
+    .patch(`/articles/${articleId}`, patchVoteReqBody)
+    .then(({ data }) => {
+      console.log(data);
+      return data.article;
+    });
+};
